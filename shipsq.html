@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>ship</title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+
+    <style>
+    *{margin-top:0; margin-left:0; margin-right:0; overflow-x:hidden; overflow-y:hidden;}
+ body{background: none;   }
+
+
+     
+      
+ 
+
+
+   
+    
+    
+
+
+
+  #imgone{width:9394px; height:100%; position:fixed; left:0%; top:0%; z-index: -5}
+#imgtwo{width:9394px; height:100%; position:absolute; left:0%; top:0%; }
+#imgthree{width:9394px; height:100%; position:absolute; left:0px; top:0%; }
+#imgfour{width:9394px; height:100%; position:absolute; left:0px; top:0%; }
+#imgfive{width:9394px; height:100%; position:absolute; left:0px; top:0%; 
+  }
+#imgsix{width:2112px; height:100%; position:absolute; left:0px; top:0%; 
+margin-left:9000px;}
+#imgseven{width:9394px; height:100%; position:absolute; left:0px; top:0%; z-index: 10;}
+#imgeight{width:9394px; height:100%; position:absolute; left:0px; top:0%; 
+  margin-left: 1000px;
+z-index: 10; 
+}
+#imgnine{width:9394px; height:100%; position:absolute; left:0px; top:0%; }
+
+
+
+
+     #sol {width:200px; height:200px; position:fixed; left:45%; bottom: -5%; z-index:9;}
+
+     #soll {width:0px; height:0px; position:fixed; left:44%; bottom: -5%; z-index:9;}
+
+     #monitor{width:0px; height:0px; background:none; position:fixed; right:0;
+      color:white; text-align:center; line-height:40px; z-index:5;}
+
+
+
+      #doip{width:350px; position:absolute;
+  top:70px; left:40px; font-size: 40px; color:white; transition:all 1s;}
+
+
+
+      html{font-family: 'Libre Baskerville', serif;}
+    </style>
+  </head>
+
+  <body>
+ <div id="myDIV" onwheel="myFunction()">
+
+
+
+
+<img id= imgone src="sq3_1_sky.png">
+    <img id= imgtwo src="sq3_2_smoke.png">
+    <img id= imgthree src="sq3_3_ship.png">
+    <img id= imgfour src="sq3_4_smoke.png">
+    <img id= imgfive src="sq3_5_atm.png"> 
+    <img id= imgsix src="sq3_6_jship.png">
+    <img id= imgseven src="sq3_7_water.png">
+    <img id= imgeight src="sq3_8_water.png">
+
+    <img id= imgnine src="sq3_9_light.png">
+  
+
+    <img id = sol src="오른발.png">
+    <img id = soll src="왼발.png">
+
+
+<div id= monitor></div>
+
+<div id= doip>Chapter 3  </div>
+
+
+
+</div>
+
+
+  <script type="text/javascript">
+
+
+
+window.onwheel = function(e){
+  var scroll = 50;
+  if(e.deltaY < 0){ scroll = -scroll; } 
+  window.scrollBy(scroll, 0); 
+}
+  
+
+
+
+ window.onscroll = function(e){
+       
+       
+        imgsix.style.left = +(window.pageXOffset/-2.5)+"px";
+        imgeight.style.left = +(window.pageXOffset/-1)+"px";
+       
+      
+     
+          
+
+
+
+           var t= document.documentElement.scrollLeft;
+  monitor.innerHTML = t +"px";
+  
+
+ }
+
+   
+
+  var toggle = "off";
+
+
+   function myFunction() {
+   
+
+if(toggle == "off"){
+      toggle = "on";
+    sol.style.width= "0px";
+
+   soll.style.width="200px";
+   soll.style.height="200px";
+      }
+      else{ 
+      toggle = "off";
+       soll.style.width= "0px";
+
+   sol.style.width="200px";
+   sol.style.height="200px";
+      
+      }
+      }
+
+
+
+
+    </script>
+
+  </body>
+</html>
